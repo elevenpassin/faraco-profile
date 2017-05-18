@@ -1,14 +1,12 @@
-'use strict';
-
 /* jshint esversion: 6 */
-var userpanel = document.querySelector('.userpanel');
-var gobtn = document.querySelector('.gobtn');
-var usericon = document.querySelector('.usericon');
-var username = document.querySelector('.username');
-var profession = document.querySelector('.profession');
-var panel = document.querySelector('.panel');
-var profile = document.querySelector('.profile');
-gobtn.addEventListener("click", function (e) {
+let userpanel = document.querySelector('.userpanel');
+let gobtn = document.querySelector('.gobtn');
+let usericon = document.querySelector('.usericon');
+let username = document.querySelector('.username');
+let profession = document.querySelector('.profession');
+let panel = document.querySelector('.panel');
+let profile = document.querySelector('.profile');
+gobtn.addEventListener("click", e=>{
   userpanel.classList.toggle("userpanel");
   userpanel.classList.toggle("userpanel-toggled");
   usericon.classList.toggle('usericon');
@@ -21,4 +19,5 @@ gobtn.addEventListener("click", function (e) {
   gobtn.classList.toggle('gobtn-toggled');
   profile.classList.toggle('profile');
   profile.classList.toggle('profile-toggled');
+
 });

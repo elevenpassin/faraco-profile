@@ -1,7 +1,243 @@
-body {
-  background: #bada55;
-  color: #FFF; }
+.btn {
+  transition: all .3s;
+  background: none;
+  margin: auto;
+  border: 2px solid #6C6C6C;
+  border-radius: 60px;
+  width: 125px;
+  height: 40px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Oxygen', Garamond;
+  font-size: 18px;
+  color: #6C6C6C; }
 
-h1 {
-  font-size: 50px;
-  text-align: center; }
+.btn:hover {
+  background: #6C6C6C;
+  color: #FFF;
+  cursor: pointer; }
+
+body {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  background: linear-gradient(-200deg, #65F4F2, #2CE199);
+  color: #FFF;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; }
+
+.userpanel {
+  position: fixed;
+  right: 0;
+  background: #FFF;
+  min-width: 97%;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  transition: all .7s; }
+  .userpanel .usericon {
+    min-width: 50px;
+    min-height: 50px;
+    width: 300px;
+    height: 300px;
+    margin: 1em auto .5em auto;
+    background: #F7F7F7;
+    border-radius: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all .7s; }
+  .userpanel .username {
+    margin: 0 auto 0 auto;
+    font-size: 59px;
+    font-family: 'Lobster', cursive;
+    color: #6C6C6C;
+    text-align: center;
+    transition: all .7s; }
+  .userpanel .profession {
+    margin: .25em auto .25em auto;
+    font-size: 37px;
+    font-family: 'Lobster', cursive;
+    color: #6C6C6C;
+    text-align: center;
+    vertical-align: center;
+    transition: all .7s; }
+  .userpanel .gobtn {
+    margin: .25em auto .25em auto; }
+  .userpanel .panel {
+    display: none; }
+  .userpanel .credits {
+    display: none; }
+
+.userpanel-toggled {
+  top: 0;
+  position: fixed;
+  right: 0;
+  background: #FFF;
+  min-width: 25%;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  transition: all .7s; }
+  .userpanel-toggled .usericon-toggled {
+    max-width: 150px;
+    max-height: 150px;
+    width: 300px;
+    height: 300px;
+    margin: 1em auto .5em auto;
+    background: #F7F7F7;
+    border-radius: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all .7s; }
+  .userpanel-toggled .username-toggled {
+    margin: 0 auto 0 auto;
+    font-size: 40px;
+    font-family: 'Lobster', cursive;
+    color: #6C6C6C;
+    text-align: center;
+    vertical-align: center;
+    transition: all .7s; }
+  .userpanel-toggled .profession-toggled {
+    margin: .25em auto .25em auto;
+    font-size: 18px;
+    font-family: 'Lobster', cursive;
+    color: #6C6C6C;
+    text-align: center;
+    vertical-align: center;
+    transition: all .7s; }
+  .userpanel-toggled .gobtn-toggled {
+    margin: .25em auto .25em auto;
+    display: none; }
+  .userpanel-toggled .panel {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start; }
+    .userpanel-toggled .panel .btn {
+      animation: flowup .5s linear;
+      margin-top: .25em;
+      margin-bottom: .25em; }
+    .userpanel-toggled .panel .blue {
+      background: #4AADF9;
+      color: #FFF;
+      border: none;
+      border: 2px solid transparent; }
+    .userpanel-toggled .panel .blue:hover {
+      background: none;
+      color: #4AADF9;
+      cursor: pointer;
+      border: 2px solid #4AADF9; }
+    .userpanel-toggled .panel .red {
+      background: #F95E4A;
+      color: #FFF;
+      border: none;
+      border: 2px solid transparent; }
+    .userpanel-toggled .panel .red:hover {
+      background: none;
+      color: #F95E4A;
+      cursor: pointer;
+      border: 2px solid #F95E4A; }
+    .userpanel-toggled .panel .grey {
+      background: #B5B5B5;
+      color: #FFF;
+      border: none;
+      border: 2px solid transparent; }
+    .userpanel-toggled .panel .grey:hover {
+      background: none;
+      color: #B5B5B5;
+      cursor: pointer;
+      border: 2px solid #B5B5B5; }
+  .userpanel-toggled .credits {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    width: 100%;
+    height: 70px;
+    background: #646464;
+    text-align: center;
+    font-family: 'Oxygen', sans-serif; }
+    .userpanel-toggled .credits a:hover, .userpanel-toggled .credits a:active, .userpanel-toggled .credits a:focus, .userpanel-toggled .credits a:visited, .userpanel-toggled .credits a {
+      text-decoration: none;
+      color: #FFF;
+      font-size: 20px;
+      font-family: 'Oxygen', sans-serif; }
+
+@keyframes flowup {
+  0% {
+    margin-bottom: 100vh;
+    opacity: 0; }
+  100% {
+    margin-bottom: .25em;
+    opacity: 1; } }
+
+.profile {
+  transition: all 1s;
+  display: none; }
+
+.profile-toggled {
+  display: block;
+  transition: all .5s;
+  background: #FFF;
+  margin: 2em;
+  max-width: 70%;
+  min-height: 1000px;
+  border-radius: 10px; }
+  .profile-toggled .section:last-child {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; }
+  .profile-toggled .section {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    color: #6C6C6C; }
+    .profile-toggled .section .heading {
+      margin: 20px;
+      font-family: 'Oxygen', sans-serif;
+      font-size: 30px;
+      font-weight: bold; }
+    .profile-toggled .section .content {
+      margin: 20px;
+      font-family: 'Oxygen', sans-serif; }
+      .profile-toggled .section .content .project {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        width: 95%;
+        height: 300px;
+        margin: 1em auto;
+        background: #F7F7F7; }
+        .profile-toggled .section .content .project .image {
+          width: 300px;
+          height: 300px;
+          background: #717171;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-attachment: fixed; }
+        .profile-toggled .section .content .project .desc {
+          width: 400px;
+          height: 300px;
+          margin: 1em; }
+          .profile-toggled .section .content .project .desc .name a:hover, .profile-toggled .section .content .project .desc .name a:active, .profile-toggled .section .content .project .desc .name a:focus, .profile-toggled .section .content .project .desc .name a:visited, .profile-toggled .section .content .project .desc .name a {
+            text-decoration: none;
+            color: #000;
+            font-size: 20px;
+            font-family: 'Oxygen', sans-serif; }
+          .profile-toggled .section .content .project .desc .sent {
+            color: #6C6C6C;
+            font-size: 18px;
+            font-family: 'Oxygen', sans-serif; }
+  .profile-toggled .jumbotron {
+    background: #717171;
+    min-width: 100%;
+    min-height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; }
