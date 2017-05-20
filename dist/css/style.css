@@ -178,7 +178,8 @@ body {
     .userpanel-toggled .panel .btn {
       animation: flowup .5s linear;
       margin-top: .25em;
-      margin-bottom: .25em; }
+      margin-bottom: .25em;
+      text-decoration: none; }
     .userpanel-toggled .panel .blue {
       background: #4AADF9;
       color: #FFF;
