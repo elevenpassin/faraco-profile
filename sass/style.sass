@@ -16,6 +16,8 @@
   height: $height
 
 $text-color: #6C6C6C
+$tablet: 768px
+$mobile: 425px
 
 .btn
   transition: all .3s
@@ -41,7 +43,8 @@ body
   margin: 0
   padding: 0
   overflow-x: hidden
-
+  @media screen and (max-width: $tablet)
+    +flex(row wrap, center)
 .userpanel
   position: fixed
   right: 0
@@ -49,6 +52,11 @@ body
   +min-size(97%, 100vh)
   +flex(column wrap, center)
   transition: all .7s
+  @media screen and (max-width: $tablet)
+    right: auto
+    left: auto
+    top: 0
+    +min-size(100%, 95vh)
   .usericon
     +min-size(50px, 50px)
     +size(300px, 300px)
@@ -91,6 +99,16 @@ body
   +min-size(25%, 100vh)
   +flex(column wrap, space-between)
   transition: all .7s
+  @media screen and (max-width: $tablet)
+    +min-size(100vw, 10vh)
+    +size(100vw, 10vh)
+    box-shadow: 0px 10px 50px 1px rgba(0,0,0,0.1)
+    +flex(row wrap, space-between)
+    left: 0
+  .userinfo
+    @media screen and (max-width: $tablet)
+      +flex(row wrap, space-around)
+      +min-size(100vw, 10vh)
   .usericon-toggled
     +max-size(150px, 150px)
     +size(300px, 300px)
@@ -101,6 +119,9 @@ body
     background-size: cover
     background-repeat: no-repeat
     transition: all .7s
+    @media screen and (max-width: $tablet)
+      margin: auto
+      +size(50px, 50px)
   .username-toggled
     margin: 0 auto 0 auto
     font-size: 40px
@@ -109,6 +130,11 @@ body
     text-align: center
     vertical-align: center
     transition: all .7s
+    @media screen and (max-width: $tablet)
+      margin: auto
+      +size(50px, 50px)
+      font-size: 30px
+      +flex(column wrap, center)
   .profession-toggled
     margin: .25em auto .25em auto
     font-size: 18px
@@ -117,11 +143,18 @@ body
     text-align: center
     vertical-align: center
     transition: all .7s
+    @media screen and (max-width: $tablet)
+      margin: auto
+      +min-size(50px, 50px)
+      font-size: 15px
+      +flex(column wrap, center)
   .gobtn-toggled
     margin: .25em auto .25em auto
     display: none
   .panel
     +flex(column wrap, flex-start)
+    @media screen and (max-width: $tablet)
+      display: none
     .btn
       animation: flowup .5s linear
       margin-top: .25em
@@ -157,6 +190,8 @@ body
        cursor: pointer
        border: 2px solid #B5B5B5
   .credits
+    @media screen and (max-width: $tablet)
+      display: none
     +flex(column wrap, center)
     +size(100%, 70px)
     background: #646464
@@ -187,6 +222,13 @@ body
   max-width: 70%
   min-height: 1000px
   border-radius: 10px
+  @media screen and (max-width: $tablet)
+    margin-top: 15vh
+    +min-size(90vw, 100vh)
+  @media screen and (max-width: $mobile)
+    margin-top: 15vh
+    +min-size(100vw, 100vh)
+    border-radius: 0%
   .section:last-child
     border-bottom-left-radius: 10px
     border-bottom-right-radius: 10px
@@ -203,28 +245,31 @@ body
       font-family: 'Oxygen', sans-serif
       .project
         +flex(row wrap, flex-start)
-        +size(95%, 300px)
+        +min-size(95%, 300px)
         margin: 1em auto
         background: #F7F7F7
         .image
-          +size(300px, 300px)
+          +min-size(30%, 300px)
           background: #717171
           background-position: center
           background-repeat: no-repeat
           background-size: cover
           background-attachment: fixed
+          @media screen and (max-width: $tablet)
+            +size(100%, 300px)
         .desc
-          +size(400px, 300px)
+          +min-size(10px, 50px)
+          max-width: 280px
           margin: 1em
           .name
             a:hover, a:active, a:focus, a:visited, a
               text-decoration: none
               color: #000
-              font-size: 20px
+              font-size: 1.5em
               font-family: 'Oxygen', sans-serif
           .sent
             color: $text-color
-            font-size: 18px
+            font-size: 1em
             font-family: 'Oxygen', sans-serif
   .jumbotron
     background: #717171
